@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Jonathan Holt</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0 user-scalable=no">
+      <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Permanent+Marker" rel="stylesheet">
+      <link rel="stylesheet" href="css/select.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </head>
+   <body>
+<div class="container">
+<audio id="audio-player" autoplay name="audio-player" src="https://fi.zophar.net/soundfiles/nintendo-snes-spc/street-fighter-ii/03%20Player%20Select.mp3" ></audio>
+<div class="musicplayer">
+  <div class="musicicon">
+    <h1>MUSIC PLAYER</h1>
+  </div>
+  <div class="toggle">
+    <div class="on">ON</div>
+    <div class="off">OFF</div>
+    <div class="slide"></div>
+  </div>
+</div>
+   <img class="sf-logo" src="https://pressthebuttons.typepad.com/.a/6a00d83452033569e201b8d2e4ef38970c-300wi">
+   <h1 class="title">Skill Select</h1>
+	 <p class="title3" id="Magento">Over the course of the past five years, I’ve worked as a Magento ecommerce developer. My role involves communicating with clients to discuss site improvements, planning work, providing estimates, leading development teams on six week long sprints and manning the support board to assist with client’s urgent issues.</p>
+   <p class="title3" id="Unity">As well as my professional experience, I enjoy programming projects recreationally too. I like to try to program my own games using a variety of tools. Unity has been a recent favourite tool to use. I’m currently working on a project to port a childhood favourite game of mine, Dr. Robotnik’s Mean Bean Machine, to mobile.</p>
+   <p class="title3" id="Python">My first experience with a programming language was Python. After acquiring a taste for web development, I enrolled in an online Python programming course ran by Rice University. The course challenged students to code their own games, starting with a simple tic-tac-toe simulator and finishing with a clone of the arcade classic 'Asteroids'.</p>
+   <p class="title3" id="Korea">BETWEEN 2012 AND 2014 I WORKED AS AN ENGLISH TEACHER IN THE CITY OF DAEGU IN SOUTH KOREA. I prepared and presented lessons, as well as running a number of extra curricular clubs such as a weekly reading club and board game club. I believe this helped my students to feel even more comfortable interacting in English. I was delighted to also have the opportunity to explore South Korea and other Asian countries during my tenure.</p>
+   <p class="title3" id="Languages">I am an avid student of languages. I first studied Korean during my time living there, earning a 'top of the class' certificate from the Daegu YMCA. I've gone on to earn a proficiency certificate in both Japanese (JLPT N4) and Spanish (DELE A1) sinc returning to the UK. I am currently studying Mandarin with the help of Duolingo.</p>
+   <p class="title3" id="Education">I studied history at the University of Manchester and graduated in 2011. My studies focused on Chinese history and for my dissertation I wrote about the Jesuit missions in Ming and Qing China, for which I received a first-class mark. I returned to education in 2014 to earn a MSc in Computing from Manchester Metropolitan University.</p>
+   <p class="title3" id="Volunteering">It was my pleasure and privilege to volunteer at the Manchester Museum between 2011 and 2012. I had the opportunity to offer visitors the chance to interact with some of the museum's Egyptian collection and gave tours around the Egyptian collection space. Sharing my passion for ancient Egypt with inquisitive visitors was a great experience.</p>
+   <p class="title3" id="Gaming">I’ve been interested in video games since playing Sonic the Hedgehog 2 as a child. As a medium, I love the variety of experiences video games can offer the player. Games can take the form of fun stress-relievers, challenging head-scratchers, emotional rollercoasters, beautiful pieces of art or the perfect activity for bonding with friends. Some current favourites include Bloodborne and Blasphemous.</p>
+   <div class="select-container">
+      <a class="character" data-name="ryu" rel="Magento">
+         <img class="character__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/ryu.png">
+         <p class="character__name">Magento</p>
+      </a>
+      <a class="character" data-name="ehonda" rel="Unity">
+         <img class="character__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/ehonda.png">
+         <p class="character__name">Unity</p>
+      </a>
+      <a class="character" data-name="blanka" rel="Python">
+         <img class="character__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/blanka.png">
+         <p class="character__name">Python</p>
+      </a>
+      <a class="character" data-name="guile" rel="Korea">
+         <img class="character__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/guile.png">
+         <p class="character__name">Korea</p>
+      </a>
+      <a class="character" data-name="ken" rel="Languages">
+         <img class="character__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/ken.png">
+         <p class="character__name">Languages</p>
+      </a>
+      <a class="character" data-name="chunli" rel="Education">
+         <img class="character__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/chunli.png">
+         <p class="character__name">Education</p>
+      </a>
+      <a class="character" data-name="zangief" rel="Volunteering">
+         <img class="character__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/zangief.png">
+         <p class="character__name">Volunteering</p>
+      </a>
+      <a class="character" data-name="dhalsim" rel="Gaming">
+         <img class="character__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/813538/dhalsim.png">
+         <p class="character__name">Gaming</p>
+      </a>
+   </div>
+</div>
+
+<script type="text/javascript">
+   $(document).ready(function(){
+   $(".toggle").click(function(){
+   $(this).toggleClass("active");
+   });
+
+   $(".slide-body").click(function(){
+   $(".slide-body .slide").toggleClass("active");
+   });
+
+  $(".on").click(function(){
+    $("#audio-player")[0].play();
+  });
+
+  $(".off").click(function(){
+    $("#audio-player")[0].pause();
+  });
+});
+
+const characterList = document.querySelectorAll(".character");
+
+characterList.forEach((character) => {
+    character.addEventListener("click", () => {
+        if (document.querySelector(".character.active")) {
+            document.querySelector(".character.active").classList.remove("active");
+        }
+        character.classList.add("active");
+        var divIdentifer = character.rel;
+
+        var title3 = document.getElementsByClassName("title3");
+        for (var i = 0; i < title3.length; i++) {
+            title3.item(i).style.display = "none";
+        }
+        document.getElementById(divIdentifer).style.display = "block";
+    });
+});
+   </script>
+   </body>
+</html>
