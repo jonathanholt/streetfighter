@@ -193,9 +193,6 @@ a {
   }
 }
 
-
-
-
 .toggle {
   background: rgba(0,0,0,0.1);
   width: 77px;
@@ -220,16 +217,16 @@ a {
 }
 .toggle .off {
   right: 10px;
-  color: #fff;
+  color: #5e6f6e;
 }
 .toggle .on {
-  left: 5px;
-  color:#5e6f6e;
+  left: 8px;
+  color:#fff;
 }
 .toggle .slide {
   transition: all 0.2s ease;
   position: absolute;
-  left: 36px;
+  left: 3px;
   top: -1px;
   bottom: 0;
   background: #6699cc;
@@ -238,17 +235,14 @@ a {
   z-index: 1;
   border-radius:5px;
 }
-.toggle:hover .slide {
-  /*background: #999;*/
-}
 .toggle.active .slide {
-  left: 3px;
+  left: 36px;
 }
 .toggle.active .on {
-  color:#fff;
+  color:#5e6f6e;
 }
 .toggle.active .off {
-  color:#5e6f6e;
+  color:#fff;
 }
 .musicicon h1{
   text-align: center;
