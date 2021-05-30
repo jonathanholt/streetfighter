@@ -48,8 +48,19 @@ a {
   visibility: block;
 }
 
-.title3 {
+.selection {
   display: none;
+}
+
+.fight-gif {
+  width: 60px;
+  aspect-ratio: auto 60 / 93;
+  height: 93px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.title3 {
   font-family: Tahoma, sans-serif;
   color: white;
   text-align: center;
@@ -82,25 +93,31 @@ a {
   position: relative;
   text-align: center;
 }
+
 .character__name {
   position: absolute;
   width: 100%;
   bottom: 0;
   display: none;
 }
-.character__img, .character__name {
+
+.character__img,
+.character__name {
   margin: 0;
   padding: 0;
 }
+
 .character__img {
   filter: grayscale(0.84);
   height: 120px;
 }
+
 .character.active {
   transform: scale(1.05);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
+
 .character.active .character__name {
   display: block;
   width: 100%;
@@ -113,6 +130,7 @@ a {
   font-weight: 700;
   padding: 0.3em 0;
 }
+
 .character.active:after {
   content: "1P";
   position: absolute;
@@ -124,11 +142,12 @@ a {
   font-weight: 700;
   text-shadow: 0px 0px 5px white;
 }
+
 .character.active .character__img {
   filter: grayscale(0);
   outline: 4px solid white;
   -webkit-animation: flash 300ms linear;
-          animation: flash 300ms linear;
+  animation: flash 300ms linear;
 }
 
 .list-footer {
@@ -145,6 +164,7 @@ a {
   bottom: 0;
   width: 100%;
 }
+
 .list-footer .heart {
   color: tomato;
   font-size: 2em;
@@ -194,7 +214,7 @@ a {
 }
 
 .toggle {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   width: 77px;
   height: 22px;
   position: relative;
@@ -207,22 +227,27 @@ a {
   font-weight: bold;
   margin: 0 auto;
 }
-.toggle .on, .toggle .off {
+
+.toggle .on,
+.toggle .off {
   z-index: 10;
   position: absolute;
   top: 0px;
   height: 24px;
-  width:29px;
+  width: 29px;
   transition: all 0.2s;
 }
+
 .toggle .off {
   right: 10px;
   color: #5e6f6e;
 }
+
 .toggle .on {
   left: 8px;
-  color:#fff;
+  color: #fff;
 }
+
 .toggle .slide {
   transition: all 0.2s ease;
   position: absolute;
@@ -233,26 +258,31 @@ a {
   width: 30px;
   height: 25px;
   z-index: 1;
-  border-radius:5px;
+  border-radius: 5px;
 }
+
 .toggle.active .slide {
   left: 36px;
 }
+
 .toggle.active .on {
-  color:#5e6f6e;
+  color: #5e6f6e;
 }
+
 .toggle.active .off {
-  color:#fff;
+  color: #fff;
 }
-.musicicon h1{
+
+.musicicon h1 {
   text-align: center;
-  font-size:16px;
-  font-family:Arial;
-  line-height:18px;
-  color:#e8592a;
-  font-weight:bold;
+  font-size: 16px;
+  font-family: Arial;
+  line-height: 18px;
+  color: #e8592a;
+  font-weight: bold;
 }
-.musicplayer{
-  width: 140px;
-  margin: 40px auto 0 auto;
+
+.musicplayer {
+  position: absolute;
+  top: 0;
 }
